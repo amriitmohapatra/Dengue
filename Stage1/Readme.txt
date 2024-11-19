@@ -16,3 +16,5 @@ A. Stage 1
     All_Forecasts1.RData. The second and third phase each involves running only the LSTM and the GRU model separately respectively and storing the results as All_Forecasts2.RData and All_Forecasts3.RData.
     In the subsequent step, I load these three files separately and combine the results in the list called All_Predictions_Master stored as All_Forecasts.RData.
     (The reason for using such an approach is that LSTM and GRU models took longer time to run and hence they were run independently.)
+    
+File Update 1: Some changes have been made and bugs removed. 
