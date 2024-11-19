@@ -9,7 +9,7 @@ A. Stage 1
     iii) Ensembling Predictions_byweek.R
     iv) Ensembling Predictions_byweek_OOS.R
     v) SummaryStatsStage1.R
-    vi) Shi Yuan Style Plot_Updated.R
+    vi) Shi Yuan Style Plot_Updated.R (Improper Name)
     
     
 4) In Within Sample Predictions.R, I had run the script in three phases. In the first phase, I execute all models except LSTM and GRU and the results are stored as
