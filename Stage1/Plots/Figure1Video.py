@@ -1,7 +1,7 @@
 import os
 import shutil
 from moviepy.editor import ImageSequenceClip
-folder_path = "C:\\Users\\amritm\\nBox\\May-Jun 2024\\Final Code\\Stage1\\Plots"
+folder_path = ""
 os.chdir(folder_path)
 
 

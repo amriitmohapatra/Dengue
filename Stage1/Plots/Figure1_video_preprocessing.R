@@ -1,7 +1,5 @@
-rm(list = ls())
-options(rstudio.help.showDataPreview = FALSE)
-options(scipen =999)
-setwd("C:/Users/amritm/nBox/May-Jun 2024/Stage1")
+rm(list = keep(dir_path, start_date_input_train, end_date_input_train, start_date_input_test, end_date_input_test))
+setwd(paste(dir_path,"/","Model", sep = ""))
 library(xts)
 library(dygraphs)
 library(ggplot2)
@@ -73,7 +71,7 @@ dir.create("WSPlots")
 
 for(rows in 1:nrow(Predictions_Ensemble)){
   print(paste("Plotting WS Plot: ",rows ,sep = ""))
-  setwd("C:/Users/amritm/nBox/May-Jun 2024/Stage1/WSPlots")
+  setwd(paste(dir_path,"/","Model/WSPlots", sep = ""))
   png(file = paste('WS',rows,'.png', sep = ""),height=24,width=40,units='cm',res=300,pointsize=10)
   lower_bound1 <- vector()
   upper_bound1 <- vector()
@@ -170,7 +168,7 @@ for(rows in 1:nrow(Predictions_Ensemble)){
   popViewport()
   popViewport()
   dev.off()
-  setwd("C:/Users/amritm/nBox/May-Jun 2024/Stage1")
+  setwd(dir_path)
 }
 
 
@@ -192,7 +190,7 @@ dir.create("OOSPlots")
 # pdf("Ensembled Forecasted Dengue Cases for Singapore_OOS.pdf", width = 17, height = 9)
 for(rows in 1:nrow(Predictions_Ensemble)){
   print(paste("Plotting OOS Plot: ",rows ,sep = ""))
-  setwd("C:/Users/amritm/nBox/May-Jun 2024/Stage1/OOSPlots")
+  setwd(paste(dir_path,"/","Model/OOSPlots", sep = ""))
   png(file = paste('OOS',rows,'.png', sep = ""),height=24,width=40,units='cm',res=300,pointsize=10)
   lower_bound1 <- vector()
   upper_bound1 <- vector()
@@ -293,7 +291,7 @@ for(rows in 1:nrow(Predictions_Ensemble)){
   popViewport()
   popViewport()
   dev.off()
-  setwd("C:/Users/amritm/nBox/May-Jun 2024/Stage1")
+  setwd(dir_path)
 }
 
 
