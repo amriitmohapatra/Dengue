@@ -52,7 +52,7 @@ model_names <- c("LASSO","SVR1","SVR2","SVR3","SVR4","DT1","DT2","Random Forest"
 copy1 <- read.csv("case data.csv")
 copy2 <- read.csv("Dengue Weight Matrix.csv")
 
-dir.create("Model")
+# dir.create("Model")
 setwd(paste(dir_path,"/","Model", sep = ""))
 
 for(names in model_names){

@@ -150,7 +150,7 @@ for(ML in 1:length(model_names)){
                                 , data = YYY2, model = "common")
     }, error = function(e) {
       # If an error occurs, execute the alternate function
-      final_predictions_presort[[week_num]] <- matrix(NA, 241, 34)
+      final_predictions_presort[[week_num]] <- matrix(NA, pred_days, n_regions)
     })
     
     final_predictions_presort[[week_num]] <- fitted.values(stage2_model) * YYY2$stage1_fit
